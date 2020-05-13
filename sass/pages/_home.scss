@@ -1,0 +1,16 @@
+// Sign up and Sign in layout
+.section-auth {
+  height: 100vh;
+  background-color: var(--color-grey-light-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50rem;
+  }
+}

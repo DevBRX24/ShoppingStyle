@@ -5,6 +5,11 @@ const authRouter = require('./routes/admin/auth');
 
 const app = express();
 
+// Express will look the content on public directory every single time
+// to check for style sheet that is being request and send it back
+// who made the request.The main.css was link to layout.js
+app.use(express.static('public'));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cookieSession({

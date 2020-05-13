@@ -1,0 +1,49 @@
+//CSS CUSTOM PROPERTY or CSS VARIABLES
+:root {
+  --color-primary-light-1: #c39bd3;
+  --color-primary-light-2: #7b23ff;
+  --color-primary: #6400fd;
+  --color-primary-dark: #5a00e4;
+  --color-primary-darkest: #5000ca;
+
+  --color-green: #55c57a;
+  --color-orange: #ff7230;
+
+  --color-grey-light-1: #f0f0f0;
+  --color-grey-light-2: #999;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+
+  --color-dark-1: #2c3e50;
+
+  --color-white: #fff;
+  --color-black: #000;
+
+  --default-font-size: 1.6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  // 1rem = 10px, 10px/16px = 62.5%
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: var(--color-grey-light-1);
+  min-height: 100vh;
+}

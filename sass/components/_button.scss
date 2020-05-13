@@ -1,0 +1,132 @@
+.btn {
+  // Button itself
+  //Anchor Tag is inline element
+  &,
+  &:link,
+  &:visited {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    border-radius: 100px;
+    //BORDERRADIUSFORALLBROWSER
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    font-size: var(--default-font-size);
+    //TRANSITIONFORALLBROWSER
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    //ButtonElementborder: none;
+    cursor: pointer;
+    -webkit-border-radius: 100px;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(var(--color-black), 0.2);
+
+    &::after {
+      opacity: 0;
+      transform: scaleX(1.4) scaleY(1.6);
+      -webkit-transform: scaleX(1.4) scaleY(1.6);
+      -moz-transform: scaleX(1.4) scaleY(1.6);
+      -ms-transform: scaleX(1.4) scaleY(1.6);
+      -o-transform: scaleX(1.4) scaleY(1.6);
+    }
+  }
+
+  // Active and Focus state of Button
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(var(--color-black), 0.2);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+  }
+
+  //   &--animated {
+  //     animation: moveInBottom 0.6s ease-out;
+  //     -webkit-animation: moveInBottom 0.9s ease-out;
+  //     animation-fill-mode: backwards;
+  //   }
+
+  // After in connected to hover
+  &:after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+    border-radius: 10rem;
+    // BORDER RADIUS FOR ALL BROWSER
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+    // TRANSITION FOR ALL BROWSER
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+  }
+
+  //   &--white {
+  //     margin-top: 3rem;
+  //     background-color: $color-white-secondary;
+  //     font-weight: 500;
+  //     color: $color-primary;
+  //     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.5);
+
+  //     &::after {
+  //       content: '';
+  //       background-color: $color-white-secondary;
+  //     }
+  //   }
+
+  //   &--grey {
+  //     margin-top: 1.7rem;
+  //     background-color: $color-grey-primary;
+  //     font-weight: 500;
+  //     color: $color-white-primary;
+  //     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.5);
+
+  //     &::after {
+  //       content: '';
+  //       background-color: $color-grey-secondary;
+  //     }
+  //   }
+
+  &--violet {
+    margin-top: 1.7rem;
+    background-color: var(--color-primary);
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: var(--color-white);
+    //box-shadow: 0 0.5rem 1rem rgba(var(--color-black), 0.5);
+    &:after {
+      content: '';
+      background-color: var(--color-secondary);
+    }
+  }
+}
