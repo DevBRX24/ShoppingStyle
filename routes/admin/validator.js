@@ -1,7 +1,20 @@
 const { check } = require('express-validator');
 const usersRepo = require('../../repositories/user');
 
+// .trim() remove the whitespace in textbox
 module.exports = {
+  // Validation for Title input
+  requireTitle: check('title')
+    .trim()
+    .isLength({ min: 5, max: 40 })
+    .withMessage('Must be between 5 and 40 characters'),
+  // Validation for price input
+  requirePrice: check('price')
+    .trim()
+    .toInt()
+    .isInt({ min: 100 })
+    .withMessage('Must be a number greater than 100'),
+  // Validation for email input
   requireEmail: check('email')
     .trim()
     .normalizeEmail()
@@ -13,10 +26,12 @@ module.exports = {
         throw new Error('Email in use');
       }
     }),
+  // Validation for password input
   requirePassword: check('password')
     .trim()
     .isLength({ min: 4, max: 20 })
     .withMessage('Must be between 4 and 20 characters'),
+  // Validation for password confirmation input
   requirePasswordConfirmation: check('passwordConfirmation')
     .trim()
     .isLength({ min: 4, max: 20 })
@@ -29,6 +44,7 @@ module.exports = {
       // is the same it return "invalid value"
       return true;
     }),
+  // Check if the email has been already used by other user
   requireEmailExists: check('email')
     .trim()
     .normalizeEmail()
@@ -40,6 +56,7 @@ module.exports = {
         throw new Error('Email not found');
       }
     }),
+  // Check if the password supplied by user was correct
   validPasswordForUser: check('password')
     .trim()
     .custom(async (password, { req }) => {

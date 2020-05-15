@@ -8,5 +8,45 @@
   </head>
   <!--String Interpolation 
     It will throw the content of signin or signup content depending on what is being called-->
-  <body></body>
+  <body>
+    <div class="content">
+      <form class="form" method="POST">
+        <div class="form__text">
+          <span class="form__span">Create </span> an amazing product that makes
+          you satisfy.
+        </div>
+        <div class="form__group">
+          <input
+            type="text"
+            name="title"
+            id="title"
+            class="form__input"
+            placeholder="Title"
+          />
+          <label for="title" class="form__label">Title</label>
+        </div>
+        <div class="form__group">
+          <input
+            type="number"
+            name="price"
+            id="price"
+            class="form__input"
+            placeholder="Price"
+          />
+          <label for="Price" class="form__label">Price</label>
+        </div>
+        <div class="form__group">
+          <input
+            type="file"
+            name="image"
+            id="image"
+            class="form__input"
+            placeholder="Upload Iamge"
+          />
+        </div>
+
+        <button class="btn btn--violet">Create Product</button>
+      </form>
+    </div>
+  </body>
 </html>
