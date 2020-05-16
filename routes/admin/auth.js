@@ -37,7 +37,8 @@ router.post(
     // Store the id of that user inside the users cookie
     req.session.userID = user.id;
 
-    res.send('Account created');
+    // After creating a product admin will redirect to this new endpoint
+    res.redirect('/products');
   }
 );
 
@@ -63,7 +64,8 @@ router.post(
 
     req.session.userID = user.id;
 
-    res.send('You are signed in');
+    // After creating a product admin will redirect to this new endpoint
+    res.redirect('/products');
   }
 );
 
