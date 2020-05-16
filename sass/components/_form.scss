@@ -75,6 +75,11 @@
   &__error {
     color: var(--color-orange);
     @include form-label;
+    transform: translateY(-1rem);
+    -webkit-transform: translateY(-1rem);
+    -moz-transform: translateY(-1rem);
+    -ms-transform: translateY(-1rem);
+    -o-transform: translateY(-1rem);
   }
 
   &__label {
@@ -103,5 +108,35 @@
     font-size: 2.2rem;
     color: var(--color-primary);
     font-weight: 700;
+  }
+
+  &__upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 1.2rem;
+  }
+
+  &__btn-upload {
+    border: 2px solid var(--color-primary);
+    color: var(--color-dark-1);
+    background-color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+
+  &__upload-btn-wrapper input[type='file'] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
   }
 }

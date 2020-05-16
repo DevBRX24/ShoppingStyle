@@ -10,23 +10,7 @@ module.exports = ({ content }) => {
       <title>Charcoal Clothes | Choose your fashion and style</title>
     </head>
     <body>
-      <section class="section-auth">
-        <div class="container">
-          <div class="content">
-           <img src="img/logo-2-white.png" alt="logo" class="content__logo">
-            <div class="content__heading">
-              Welcome to Charcoal
-            </div>
-            <div class="content__sub-heading">
-             We make an awesome style for your fashion
-            </div>
-            <div class="content__legal">
-              &copy; 2020 by Charcoal. All rights reserved
-            </div>
-          </div>
-             ${content}
-        </div>
-      </section>
+      ${content}
     </body>
   </html>
     `;
