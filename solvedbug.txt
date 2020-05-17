@@ -1,0 +1,12 @@
+****************************************************
+Created an edit.js file on admin/products folder and require it to
+routes/admin products.js. The function of this file is to edit Title, Price and Image of the products
+
+ISSUE: css style does not load properly 
+
+ERROR MESSAGE: Refused to apply style from 'http://localhost:3000/admin/products/e131c244/css/main.css' 
+because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. 
+
+SOLUTION: Adding this tag on html header before css load fixed the issue
+<base href="/">
+****************************************************

@@ -8,10 +8,12 @@ module.exports = ({ products }) => {
       <div class="col col-1" data-label="Title"> ${product.title}</div>
       <div class="col col-2" data-label="Price"> ${product.price}</div>
       <div class="col col-3" data-label="Edit">
-      <button class="btn-table btn-table__violet">Edit</button>
+      <a href="/admin/products/${product.id}/edit">
+        <button class="btn-table btn-table--violet">Edit</button>
+      </a>
       </div>
       <div class="col col-4" data-label="Delete">
-      <button class="btn-table btn-table__orange">Delete</button>
+      <button class="btn-table btn-table--orange">Delete</button>
       </div>
     </li>
     `;
@@ -20,10 +22,11 @@ module.exports = ({ products }) => {
 
   return layout({
     content: ` 
-    <div class="table-container">
+    <div class="section-dtable">
       <div class="table-product">
-        <h2 class="table-product__text">Charcol Products</h2>
-        <button class="btn-table btn-table__green">New Products</button>
+        <h2 class="table-product__text">Charcoal Admin Panel</h2>
+        <button class="btn-table btn-table--product">Products</button>
+        <button class="btn-table btn-table--product">New Products</button>
       </div>
       <ul class="responsive-table">
         <li class="table-header">

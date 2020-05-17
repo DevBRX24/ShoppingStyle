@@ -128,20 +128,18 @@
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
 
-  &__violet {
+  &--violet {
     background-color: var(--color-primary);
   }
 
-  &__orange {
+  &--orange {
     background-color: var(--color-orange);
   }
 
-  &__orange {
-    background-color: var(--color-orange);
-  }
-
-  &__green {
-    background-color: var(--color-green);
+  &--product {
+    font-weight: 700;
+    border: solid 1px var(--color-primary);
+    color: var(--color-primary);
   }
 
   @include btn-hover;

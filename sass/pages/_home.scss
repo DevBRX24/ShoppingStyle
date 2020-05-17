@@ -24,3 +24,19 @@
   align-items: center;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
+
+.section-dtable {
+  width: 80%;
+  margin: auto;
+  transform: translateY(30%);
+  -webkit-transform: translateY(30%);
+  -moz-transform: translateY(30%);
+  -ms-transform: translateY(30%);
+  -o-transform: translateY(30%);
+}
+
+.section-product {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--color-white);
+}

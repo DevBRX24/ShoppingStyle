@@ -9,42 +9,46 @@
   <!--String Interpolation 
     It will throw the content of signin or signup content depending on what is being called-->
   <body>
-    <div class="container">
-      <h2>Responsive Tables Using LI <small>Triggers on 767px</small></h2>
-      <ul class="responsive-table">
-        <li class="table-header">
-          <div class="col col-1">Title</div>
-          <div class="col col-2">Price</div>
-          <div class="col col-3">Edit</div>
-          <div class="col col-4">Delete</div>
-        </li>
-        <li class="table-row">
-          <div class="col col-1" data-label="Title">42235</div>
-          <div class="col col-2" data-label="Price">John Doe</div>
-          <div class="col col-3" data-label="Edit">$350</div>
-          <div class="col col-4" data-label="Delete">Pending</div>
-        </li>
-        <li class="table-row">
-          <div class="col col-1" data-label="Title">42442</div>
-          <div class="col col-2" data-label="Price">Jennifer Smith</div>
-          <div class="col col-3" data-label="Edit">$220</div>
-          <div class="col col-4" data-label="Delete">Pending</div>
-        </li>
-        <li class="table-row">
-          <div class="col col-1" data-label="Title">42257</div>
-          <div class="col col-2" data-label="Price">John Smith</div>
-          <div class="col col-3" data-label="Edit">$341</div>
-          <div class="col col-4" data-label="Delete">Pending</div>
-        </li>
-        <li class="table-row">
-          <div class="col col-1" data-label="Title">42311</div>
-          <div class="col col-2" data-label="Price">John Carpenter</div>
-          <div class="col col-3" data-label="Edit">$115</div>
-          <div class="col col-4" data-label="Delete">
-            <a href="#product" class="btn btn-violet"></a>
+    <section class="section-product">
+      <div class="product-container">
+        <div class="product-content">
+          <h1 class="product-text">Edit Products</h1>
+          <img src="img/create.png" alt="Illustration" class="product-image" />
+        </div>
+        <div class="product-content">
+          <form class="form" method="POST" enctype="multipart/form-data">
+            <div class="form__text">
+              <span class="form__span">Create </span> an amazing product that makes you satisfy.
+            </div>
+            <div class="form__group">
+              <input
+              type="text"
+              name="title"
+              id="title"
+              class="form__input"
+              placeholder="Title"
+              />
+            <label for="title" class="form__label">Title</label>
+            <div class="form__error">${getError(errors, 'title')}</div>
+            <div class="form__group">
+              <input
+              type="number"
+              name="price"
+              id="price"
+              class="form__input"
+              placeholder="Price"
+              />
+              <label for="Price" class="form__label">Price</label>
+              <div class="form__error">${getError(errors, 'price')}</div>
+            </div>
+            <div class="form__upload-btn-wrapper">
+            <button class="form__btn-upload">Upload image</button>
+            <input type="file" name="image" id="image" />
           </div>
-        </li>
-      </ul>
-    </div>
+          <button class="btn btn--violet">Create Product</button>
+        </form>
+        </div>
+      </div>
+  </section>
   </body>
 </html>
