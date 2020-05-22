@@ -146,3 +146,52 @@
 
   @include btn-active-focus;
 }
+
+// You can use href or button to  make circle
+.btn-circle {
+  &,
+  &:link,
+  &:visited {
+    text-align: center;
+    font-size: 3rem;
+    display: inline-block;
+    border: none;
+    color: var(--color-white);
+    padding: 0.3rem 1.7rem;
+    background: var(--color-primary);
+    border-radius: 100%;
+    box-shadow: 0rem 1rem 3rem rgba(black, 0.3);
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+
+    // Button
+    cursor: pointer;
+    padding: 1rem 1.7rem;
+  }
+
+  &:hover {
+    outline: none;
+    background-color: var(--color-primary);
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+  }
+
+  &:active {
+    box-shadow: 0rem 1rem 2rem rgba(black, 0.4);
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}

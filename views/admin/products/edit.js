@@ -1,6 +1,7 @@
+const { getError } = require('../../helper');
 const layout = require('../layout');
 
-module.exports = ({ product }) => {
+module.exports = ({ product, errors }) => {
   return layout({
     content: `
     <section class="section-product">
@@ -10,7 +11,7 @@ module.exports = ({ product }) => {
           <img src="img/edit.png" alt="Illustration" class="product-image" />
           </div>
         <div class="product-content">
-          <form class="form products-form" method="POST">
+          <form class="form products-form" method="POST" enctype="multipart/form-data">
             <div class="form__text">
               <span class="form__span">Keep </span> our products updated for our customers.
             </div>
@@ -24,6 +25,7 @@ module.exports = ({ product }) => {
               placeholder="Title"
               />
             <label for="title" class="form__label">Title</label>
+            <div class="form__error">${getError(errors, 'title')}</div>
             <div class="form__group">
               <input
               type="number"
@@ -34,10 +36,11 @@ module.exports = ({ product }) => {
               placeholder="Price"
               />
               <label for="Price" class="form__label">Price</label>
+              <div class="form__error">${getError(errors, 'price')}</div>
             </div>
             <div class="form__upload-btn-wrapper">
             <button class="form__btn-upload">Upload image</button>
-            <input type="file" value="${product.image}" name="image" id="image" />
+            <input type="file" name="image" />
           </div>
           <button class="btn btn--violet">Update</button>
           </form>

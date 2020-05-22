@@ -9,46 +9,44 @@
   <!--String Interpolation 
     It will throw the content of signin or signup content depending on what is being called-->
   <body>
-    <section class="section-product">
-      <div class="product-container">
-        <div class="product-content">
-          <h1 class="product-text">Edit Products</h1>
-          <img src="img/create.png" alt="Illustration" class="product-image" />
-        </div>
-        <div class="product-content">
-          <form class="form" method="POST" enctype="multipart/form-data">
-            <div class="form__text">
-              <span class="form__span">Create </span> an amazing product that makes you satisfy.
-            </div>
-            <div class="form__group">
-              <input
-              type="text"
-              name="title"
-              id="title"
-              class="form__input"
-              placeholder="Title"
-              />
-            <label for="title" class="form__label">Title</label>
-            <div class="form__error">${getError(errors, 'title')}</div>
-            <div class="form__group">
-              <input
-              type="number"
-              name="price"
-              id="price"
-              class="form__input"
-              placeholder="Price"
-              />
-              <label for="Price" class="form__label">Price</label>
-              <div class="form__error">${getError(errors, 'price')}</div>
-            </div>
-            <div class="form__upload-btn-wrapper">
-            <button class="form__btn-upload">Upload image</button>
-            <input type="file" name="image" id="image" />
+    <form action="/cart/products" method="POST">
+      <input hidden value="${product.id}" name="productId" />
+      <button class="btn-circle">
+        <i class="cta__icon icon-ecommerce-cart-check"></i>
+      </button>
+    </form>
+    <a href="/cart" class="cta__icon icon-ecommerce-cart-check">Carts</a>
+
+    <div class="main-header">
+      <h1 class="main-header__text">Charcoal Style</h1>
+      <div class="header-button">
+        <a href="/cart" class="cta__icon icon-ecommerce-cart-check">Product</a>
+        <a href="/cart" class="cta__icon icon-ecommerce-cart-check">Carts</a>
+      </div>
+      <div class="main-header__banner">
+        &nbsp;
+      </div>
+      <h4>Features Items</h4>
+    </div>
+
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-flex">
+          <div class="contact-info">
+            <div class="contact-info__text">+ 1 555 987 6543</div>
+            <div class="contact-info__text">charcoal@style.com</div>
           </div>
-          <button class="btn btn--violet">Create Product</button>
-        </form>
+        </div>
+        <div class="navbar-flex">
+          <ul class="list-items">
+            <li class="items"></li>
+            <li class="items"></li>
+            <li class="items"></li>
+            <li class="items"></li>
+            <li class="items"></li>
+          </ul>
         </div>
       </div>
-  </section>
+    </nav>
   </body>
 </html>

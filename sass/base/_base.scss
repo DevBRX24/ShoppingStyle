@@ -8,6 +8,7 @@
 
   --color-green: #55c57a;
   --color-orange: #ff7230;
+  --color-yellow: #ffc300;
 
   --color-grey-light-1: #f0f0f0;
   --color-grey-light-2: #999;
@@ -47,6 +48,6 @@ body {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  background-color: var(--color-grey-light-1);
+  background: #e1e1e1;
   min-height: 100vh;
 }

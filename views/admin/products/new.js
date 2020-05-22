@@ -9,13 +9,13 @@ module.exports = ({ errors }) => {
     <section class="section-product">
       <div class="product-container">
         <div class="product-content">
-          <h1 class="product-text">Create Products</h1>
+          <h1 class="product-text">Create a Products</h1>
           <img src="img/create.png" alt="Illustration" class="product-image" />
         </div>
         <div class="product-content">
           <form class="form products-form" method="POST" enctype="multipart/form-data">
             <div class="form__text">
-              <span class="form__span">Create </span> an amazing product that makes you satisfy.
+              <span class="form__span">Create </span> an amazing products for our customers.
             </div>
             <div class="form__group">
               <input
@@ -27,6 +27,7 @@ module.exports = ({ errors }) => {
               />
             <label for="title" class="form__label">Title</label>
             <div class="form__error">${getError(errors, 'title')}</div>
+            
             <div class="form__group">
               <input
               type="number"
@@ -42,7 +43,7 @@ module.exports = ({ errors }) => {
             <button class="form__btn-upload">Upload image</button>
             <input type="file" name="image" id="image" />
           </div>
-          <button class="btn btn--violet">Create Product</button>
+          <button class="btn btn--violet">Submit</button>
         </form>
         </div>
       </div>

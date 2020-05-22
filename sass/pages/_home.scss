@@ -1,42 +1,43 @@
 // Sign up and Sign in layout
 .section-auth {
   height: 100vh;
-  background-color: var(--color-grey-light-1);
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
 
   .container {
+    background: #e1e1e1;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 50rem;
   }
 }
-
-.section-new {
-  background: var(--color-primary);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-}
-
 .section-dtable {
   width: 80%;
   margin: auto;
-  transform: translateY(30%);
-  -webkit-transform: translateY(30%);
-  -moz-transform: translateY(30%);
-  -ms-transform: translateY(30%);
-  -o-transform: translateY(30%);
+  transform: translateY(15%);
+  -webkit-transform: translateY(15%);
+  -moz-transform: translateY(15%);
+  -ms-transform: translateY(15%);
+  -o-transform: translateY(15%);
+  border-radius: 3rem;
+  background: #e1e1e1;
+  box-shadow: 2rem 2rem 6rem #bfbfbf, -2rem -2rem 6rem #ffffff;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
 }
 
 .section-product {
   height: 100vh;
   width: 100%;
-  background-color: var(--color-white);
+  background: #e1e1e1;
+}
+
+.section-main {
+  position: relative;
+  background: #e1e1e1;
 }

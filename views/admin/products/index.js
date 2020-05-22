@@ -6,14 +6,16 @@ module.exports = ({ products }) => {
       return ` 
       <li class="table-row">
       <div class="col col-1" data-label="Title"> ${product.title}</div>
-      <div class="col col-2" data-label="Price"> ${product.price}</div>
+      <div class="col col-2" data-label="Price"> &#x20B1; ${product.price}</div>
       <div class="col col-3" data-label="Edit">
       <a href="/admin/products/${product.id}/edit">
         <button class="btn-table btn-table--violet">Edit</button>
       </a>
       </div>
       <div class="col col-4" data-label="Delete">
-      <button class="btn-table btn-table--orange">Delete</button>
+      <form method="POST" action="/admin/products/${product.id}/delete">
+         <button class="btn-table btn-table--orange">Delete</button>
+      </form>
       </div>
     </li>
     `;
@@ -26,7 +28,9 @@ module.exports = ({ products }) => {
       <div class="table-product">
         <h2 class="table-product__text">Charcoal Admin Panel</h2>
         <button class="btn-table btn-table--product">Products</button>
-        <button class="btn-table btn-table--product">New Products</button>
+        <a href="/new">
+          <button class="btn-table btn-table--product">New Products</button>
+        </a>
       </div>
       <ul class="responsive-table">
         <li class="table-header">
