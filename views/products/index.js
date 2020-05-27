@@ -103,21 +103,10 @@ module.exports = ({ products }) => {
       <div class="card-header">
         <h1 class="card-header__text">Charcoal Style</h1>
             <div class="card-header__button">
-                <a href="/cart" class="btn "> 
-                    <svg class="list-items__social-icon">
-                        <use xlink:href="img/sprite.svg#icon-star-full"></use>
-                    </svg>
-                 Product</a>
-                 <a href="/cart" class="btn "> 
-                    <svg class="list-items__social-icon">
-                        <use xlink:href="img/sprite.svg#icon-cart"></use>
-                    </svg>
-              Product</a>
+                <a href="/cart" class="btn btn--white"> Product</a>
+                 <a href="/cart" class="btn btn--white"> Product</a>
             </div>
-            <div class="banner">
-                <p class="banner__text">Limited Time Offer - Order Today for<span class="banner__price">$99</span></p>
-            </div>
-            <h4>Features Items</h4>
+            <h4 class="card-header__text">Features Items</h4>
       </div>
         <div class="card">
             ${renderedProducts}
